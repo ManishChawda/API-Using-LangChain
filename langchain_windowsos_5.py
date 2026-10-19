@@ -1,6 +1,8 @@
 from langchain.tools import tool
 from langchain_groq import ChatGroq
+from dotenv import load_dotenv
 import requests
+import os
 
 
 @tool
@@ -27,7 +29,7 @@ def get_memory_info():
 
 llm = ChatGroq(
     model="llama-3.3-70b-versatile",
-    api_key="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"
+    GROQ_API_KEY= os.getenv("GROQ_API_KEY")
 )
 
 tools = [
