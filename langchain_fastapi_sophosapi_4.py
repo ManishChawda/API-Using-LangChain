@@ -12,8 +12,8 @@ load_dotenv()
 # ==========================================
 
 llm = ChatGroq(
-    model="llama-3.3-70b-versatile",
-    GROQ_API_KEY= os.getenv("GROQ_API_KEY")
+    model="openai/gpt-oss-120b",
+    api_key=os.getenv("GROQ_API_KEY")
 )
 
 print("\nType exit or quit to stop.\n")
